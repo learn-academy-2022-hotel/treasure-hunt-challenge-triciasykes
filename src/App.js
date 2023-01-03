@@ -15,13 +15,15 @@ const App = () => {
     "?"
   ])
 
+  const [treasureLocation, setTreasureLocation]= useState(Math.floor(Math.random() * board.length))
+
   const handleGamePlay = (clickedSquare) => {
     let updateBoard = [...board]
     updateBoard[clickedSquare] = "🌴"
     setBoard(updateBoard)
   }
 
-
+  console.log(treasureLocation)
   return (
     <>
       <h1>Treasure Hunt Game</h1>
